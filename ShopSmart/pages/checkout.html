@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - ShopSmart</title>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a
+        href="../index.html"
+        class="logo"
+        tabindex="0"
+        role="button"
+        aria-label="Go to homepage"
+        style="
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          text-decoration: none;
+          color: inherit;
+        "
+      >
+        <svg
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="64" height="64" rx="12" fill="#121212" />
+          <path
+            d="M20 24H44V48C44 50.2091 42.2091 52 40 52H24C21.7909 52 20 50.2091 20 48V24Z"
+            stroke="#82aaff"
+            stroke-width="4"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M24 24V16C24 14.3431 25.3431 13 27 13H37C38.6569 13 40 14.3431 40 16V24"
+            stroke="#ff6f91"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        ShopSmart
+      </a>
+      <div
+        class="nav-right"
+        style="margin-left: auto; display: flex; align-items: center"
+      >
+        <div
+          class="shopping-bag"
+          title="Shopping Bag"
+          aria-label="Shopping bag with item count"
+          tabindex="0"
+          role="button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            width="24"
+            fill="#fff"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 2h12l-1.5 4.5h-9zM5 6v14h14V6H5zm3 4a3 3 0 1 1 6 0v2h-6v-2z"
+            />
+          </svg>
+          <span class="bag-count" id="bagCount">0</span>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cart-header-row">
+        <h1>Complete Your Purchase</h1>
+      </div>
+      <section class="checkout-section">
+        <form class="checkout-form">
+          <fieldset>
+            <legend>Billing Information</legend>
+            <div class="form-group">
+              <label for="billing-name">Full Name</label>
+              <input
+                type="text"
+                id="billing-name"
+                name="billing-name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="billing-email">Email</label>
+              <input
+                type="email"
+                id="billing-email"
+                name="billing-email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="billing-address">Address</label>
+              <input
+                type="text"
+                id="billing-address"
+                name="billing-address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="billing-city">City</label>
+              <input
+                type="text"
+                id="billing-city"
+                name="billing-city"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="billing-zip">Postal Code</label>
+              <input type="text" id="billing-zip" name="billing-zip" required />
+            </div>
+            <div class="form-group">
+              <label for="billing-country">Country</label>
+              <input
+                type="text"
+                id="billing-country"
+                name="billing-country"
+                required
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Payment Information</legend>
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card-number"
+                maxlength="19"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="card-expiry">Expiry Date</label>
+                <input
+                  type="text"
+                  id="card-expiry"
+                  name="card-expiry"
+                  maxlength="5"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="card-cvc">CVC</label>
+                <input
+                  type="text"
+                  id="card-cvc"
+                  name="card-cvc"
+                  maxlength="4"
+                  placeholder="123"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+          <button
+            type="submit"
+            class="btn"
+            style="margin-top: 1.5rem; width: 100%"
+          >
+            Place Order
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 ShopSmart. All rights reserved.</p>
+    </footer>
+    <script src="checkout.js"></script>
+  </body>
+</html>
