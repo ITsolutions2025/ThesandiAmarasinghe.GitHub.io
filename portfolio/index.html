@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav ul li a");
+            let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+            links.forEach(link => {
+                if (link.getAttribute("href").toLowerCase() === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <style>
+        nav {
+            background-color: #000;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.3s;
+        }
+        nav ul li a.active {
+            color: pink;
+        }
+        nav ul li a:hover {
+            color: pink;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            background: #000;
+            padding: 5%;
+            box-sizing: border-box;
+        }
+        .hero-content {
+            max-width: 50%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            color: pink;
+            display: block;
+        }
+        .hero h2 {
+            font-size: 2.1rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .hero p {
+            font-size: 1.4rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .hero-buttons a {
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>My Portfolio</h1>
+                <h2>Thesandi Sadevnee Amarasinghe</h2>
+                <p class="subtext">This site showcases my academic and creative projects, including work in web development, SQL, and software design, developed during my journey as an IT student at Humber College.</p>
+                <div class="hero-buttons">
+                    <a href="portfolio.html" class="btn">Explore More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../images/profile.png" alt="Feature Image">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
