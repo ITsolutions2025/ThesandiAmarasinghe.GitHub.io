@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #000;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+/* Highlight the active page in the navigation by changing text color to pink */
+nav ul li a.active {
+    color: pink;
+}
+
+nav ul li a:hover {
+    color: pink;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: #000;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 45%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: pink;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.hero h1 + p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.hero h1 span {
+    color: #ffcc00;
+}
+
+.hero-image {
+    width: 50%; /* Increased the image size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Align text properly */
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container p {
+    margin-top: -10px; /* Moves text closer to title */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+}
