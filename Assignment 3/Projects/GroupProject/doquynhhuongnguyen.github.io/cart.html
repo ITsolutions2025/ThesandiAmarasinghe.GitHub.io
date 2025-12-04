@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./assets/shopping-cart-icon.webp" width="40px">
+                    <span>Bmazon</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button>
+                        <img src="./assets/magnifying-glass.webp" width="20px">
+                    </button>
+                </div>
+                <div class="account-cart">
+                    <a href="./login.html"><img src="./assets/user.webp" width="20px">Account</a>
+                    <a href="cart.html"><img src="./assets/cart-148964_1280.png" width="15px">Cart</a>
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="mobile-menu">
+                <a href="./login.html"><img src="./assets/user.webp" width="20px">Account</a>
+                <a href="cart.html"><img src="./assets/cart-148964_1280.png" width="15px">Cart</a>
+            </div>
+        </div>
+    </header>
+    <div class="cart-container">
+        <div class="cart-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="product">
+                                <img src="./assets/airpod_max.jpg" alt="Product Image">
+                                <div>
+                                    <strong>AirPods Max</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$559.00</td>
+                        <td>
+                            <div class="quantity">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td>$559.00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product">
+                                <img src="./assets/macbook.webp" alt="Product Image">
+                                <div>
+                                    <strong>Macbook Pro 13 inch</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$1499</td>
+                        <td>
+                            <div class="quantity">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td>$1499</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product">
+                                <img src="./assets/book.webp" alt="Product Image">
+                                <div>
+                                    <strong>Think and Grow Rich</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$29.00</td>
+                        <td>
+                            <div class="quantity">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td>$29.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Total -->
+        <div class="cart-total">
+            <p><strong>Total: $2,087.00</strong></p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="cart-buttons">
+            <button class="checkout">Checkout</button>
+        </div>
+
+    </div>
+        <!-- Footer -->
+    <div class="footer-line"></div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <h2>Bmazon</h2>
+                </div>
+                <p>We are committed to providing the best products and services to our customers.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Department</h4>
+                    <ul>
+                        <li>Electronics</li>
+                        <li>Clothings</li>
+                        <li>Books</li>
+                        <li>Accessories</li>
+                        <li>Groceries</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Toronto, Canada</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> contact@bmazon.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <p>2023 Your Company. All rights reserved.</p>
+                    <ul class="socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

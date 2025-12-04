@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesandi (@thesandi.amarasinghe)</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        .skill-category {
+            background: #fce4ec;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #f8bbd0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .info-section {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        .info-block {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .info-block:last-child {
+            border-bottom: none;
+        }
+
+        .info-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .info-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f8bbd0;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            color: var(--text-color);
+        }
+
+        .info-details h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .info-details span {
+            display: block;
+            font-size: 14px;
+            color: var(--secondary-text);
+            margin-bottom: 4px;
+        }
+
+        .info-desc {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .profile-edit-btn+.profile-edit-btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Thesandi</div>
+            <div class="nav-links">
+                <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+                <a href="contact.html"><i class="far fa-paper-plane"></i></a>
+                <a href="#"><i class="far fa-compass"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="index.html"><img src="images/profile.png"
+                        style="width: 24px; height: 24px; border-radius: 50%; display: inline-block;"></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-top-bar" style="display: none;">
+        <div class="logo">Thesandi</div>
+        <div><a href="contact.html" style="font-size: 24px;"><i class="far fa-paper-plane"></i></a></div>
+    </div>
+
+    <div class="container">
+
+        <header class="profile-header">
+            <div class="profile-image">
+                <img src="images/profile.png" alt="Profile Picture">
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-user-settings">
+                    <h1 class="profile-user-name">thesandi.amarasinghe</h1>
+                    <i class="fas fa-cog" style="font-size: 24px; margin-left: 15px; cursor: pointer;"></i>
+                </div>
+
+                <ul class="profile-stats">
+                    <li><span class="profile-stat-count">2</span> projects</li>
+                    <li><span class="profile-stat-count">1.2k</span> followers</li>
+                    <li><span class="profile-stat-count">450</span> following</li>
+                </ul>
+
+                <div class="profile-bio">
+                    <span class="profile-real-name">Thesandi Amarasinghe</span>
+                    <p>👩‍💻 IT Student @ Humber College<br>
+                        🔐 Web Dev Enthusiast<br>
+                        ✨ Web Dev | SQL | Design<br>
+                        📍 Toronto, ON<br>
+                        <a href="https://www.linkedin.com/in/thesandi-amarasinghe" target="_blank"
+                            style="color: var(--accent-color);">linkedin.com/in/thesandi-amarasinghe</a>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div class="highlights">
+            <div class="highlight-item">
+                <div class="highlight-circle">
+                    <img src="images/icon-cybersec.png" alt="Cyber">
+                </div>
+                <div class="highlight-title">CyberSec</div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-circle">
+                    <img src="images/icon-webdev.png" alt="Web Dev">
+                </div>
+                <div class="highlight-title">Web Dev</div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-circle">
+                    <img src="images/icon-sql.png" alt="SQL">
+                </div>
+                <div class="highlight-title">SQL</div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-circle">
+                    <img src="images/icon-about.png" alt="About">
+                </div>
+                <div class="highlight-title">About</div>
+            </div>
+        </div>
+
+        <div class="gallery-nav">
+            <div class="gallery-tab active" onclick="switchTab('projects')"><i class="fas fa-th"></i> PROJECTS</div>
+            <div class="gallery-tab" onclick="switchTab('skills')"><i class="fas fa-code"></i> SKILLS</div>
+            <div class="gallery-tab" onclick="switchTab('info')"><i class="fas fa-user-tag"></i> MY INFO</div>
+        </div>
+
+        <!-- PROJECTS TAB -->
+        <div id="projects" class="tab-content active">
+            <div style="max-width: 600px; margin: 0 auto;">
+
+                <!-- Project 1: ShopSmart -->
+                <article
+                    style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 3px; margin-bottom: 30px;">
+                    <div
+                        style="display: flex; align-items: center; padding: 14px; border-bottom: 1px solid var(--border-color);">
+                        <img src="images/profile.png" alt="User"
+                            style="width: 32px; height: 32px; border-radius: 50%; margin-right: 10px;">
+                        <div style="font-weight: 600; font-size: 14px; flex: 1;">thesandi.amarasinghe</div>
+                    </div>
+                    <img src="images/shopsmart-preview.png" alt="ShopSmart"
+                        style="width: 100%; display: block; object-fit: cover; max-height: 500px;">
+                    <div style="padding: 10px 14px; font-size: 24px; display: flex; gap: 16px;">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-eye" onclick="window.open('Projects/ShopSmart (2)/ShopSmart/index.html')"
+                            style="cursor: pointer;"></i>
+                    </div>
+                    <div style="padding: 0 14px; font-weight: 600; font-size: 14px; margin-bottom: 8px;">100 likes</div>
+                    <div style="padding: 0 14px; font-size: 14px; margin-bottom: 8px; line-height: 1.5;">
+                        <span style="font-weight: 600; margin-right: 5px;">thesandi.amarasinghe</span>
+                        <strong>ShopSmart – Live Website</strong><br>
+                        <span style="font-size: 12px; color: var(--secondary-text);">Jun 2025 - Aug 2025 • Associated
+                            with Humber College</span><br>
+                        Group e-commerce project built using HTML, CSS, JavaScript, Bootstrap, jQuery, and XML/XSLT.
+                        Features product search, sorting, and detail view using API integration.<br>
+                        <a href="Projects/ShopSmart (2)/ShopSmart/index.html"
+                            style="color: var(--accent-color);">#ViewProject</a>
+                        #webdev #ecommerce #api #bootstrap
+                    </div>
+                    <div
+                        style="padding: 0 14px 14px; font-size: 10px; color: var(--secondary-text); text-transform: uppercase;">
+                        JUN 2025</div>
+                </article>
+
+                <!-- Project 2: Bmazon -->
+                <article
+                    style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 3px; margin-bottom: 30px;">
+                    <div
+                        style="display: flex; align-items: center; padding: 14px; border-bottom: 1px solid var(--border-color);">
+                        <img src="images/profile.png" alt="User"
+                            style="width: 32px; height: 32px; border-radius: 50%; margin-right: 10px;">
+                        <div style="font-weight: 600; font-size: 14px; flex: 1;">thesandi.amarasinghe</div>
+                    </div>
+                    <img src="images/bmazon-preview.png" alt="Bmazon"
+                        style="width: 100%; display: block; object-fit: cover; max-height: 500px;">
+                    <div style="padding: 10px 14px; font-size: 24px; display: flex; gap: 16px;">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-eye"
+                            onclick="window.open('Projects/GroupProject/doquynhhuongnguyen.github.io/index.html')"
+                            style="cursor: pointer;"></i>
+                    </div>
+                    <div style="padding: 0 14px; font-weight: 600; font-size: 14px; margin-bottom: 8px;">85 likes</div>
+                    <div style="padding: 0 14px; font-size: 14px; margin-bottom: 8px; line-height: 1.5;">
+                        <span style="font-weight: 600; margin-right: 5px;">thesandi.amarasinghe</span>
+                        <strong>E-Commerce Shopping Website</strong><br>
+                        <span style="font-size: 12px; color: var(--secondary-text);">Jan 2025 - Apr 2025 • Associated
+                            with Humber College</span><br>
+                        Collaborated with a team to build a fully functional eCommerce shopping website using HTML, CSS,
+                        JavaScript, and jQuery. The site includes a product catalog, navigation menus, responsive
+                        design, and interactive features such as product ratings. I developed the product detail page
+                        and implemented the wishlist functionality.<br>
+                        <a href="Projects/GroupProject/doquynhhuongnguyen.github.io/index.html"
+                            style="color: var(--accent-color);">#ViewProject</a> #teamwork #webdesign #jquery
+                    </div>
+                    <div
+                        style="padding: 0 14px 14px; font-size: 10px; color: var(--secondary-text); text-transform: uppercase;">
+                        JAN 2025</div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- SKILLS TAB -->
+        <div id="skills" class="tab-content">
+            <div class="skills-list">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML, CSS, JavaScript</span>
+                        <span class="skill-tag">SQL & Database Handling</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Fetch API</span>
+                        <span class="skill-tag">LocalStorage</span>
+                        <span class="skill-tag">Technical Troubleshooting</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-users-cog"></i> Professional Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Accuracy & Validation</span>
+                        <span class="skill-tag">Attention to Detail</span>
+                        <span class="skill-tag">Problem-Solving</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Creativity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MY INFO TAB -->
+        <div id="info" class="tab-content">
+            <div class="info-section">
+                <div class="info-block">
+                    <div class="info-title">About Me</div>
+                    <p style="line-height: 1.6;">I am a passionate student currently studying Information Technology at
+                        Humber College. With a deep interest in the tech field, my academic journey began with a strong
+                        foundation in computer science and programming. I have developed a keen interest in
+                        cybersecurity and enjoy learning new technologies to secure systems.</p>
+                    <div style="margin-top: 15px;">
+                        <a href="CV/Thesandi Sadevnee Amarasinghe.pdf" target="_blank"
+                            style="background-color: var(--button-bg); color: var(--button-text); padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-block; border: 1px solid var(--border-color);">View
+                            CV</a>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-title">Education</div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>Postgraduate Certificate (ITS)</strong><br>
+                        <span style="color: var(--secondary-text); font-size: 13px;">Humber College, Toronto Canada • In
+                            Progress (2025)</span>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>OTHM Level 4, 5 and 6 IT</strong><br>
+                        <span style="color: var(--secondary-text); font-size: 13px;">Metropolitan College, Colombo, Sri
+                            Lanka • March 2024</span>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>GCE Advanced Level (A/L)</strong><br>
+                        <span style="color: var(--secondary-text); font-size: 13px;">St. Peters College, Kurana, Sri
+                            Lanka • January 2022</span>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>GCE Ordinary Level (O/L)</strong><br>
+                        <span style="color: var(--secondary-text); font-size: 13px;">A.I.S Negombo, Sri Lanka • December
+                            2018</span>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-title">Work Experience</div>
+                    <div class="info-item">
+                        <div class="info-logo">P</div>
+                        <div class="info-details">
+                            <h4>Data Processing Assistant</h4>
+                            <span>Prestige International Logistics (PVT) LTD</span>
+                            <span>Mar 2022 - Apr 2023 · 1 yr 2 mos</span>
+                            <div class="info-desc">Supported data processing operations by compiling, validating, and
+                                organizing large data sets. Assisted with troubleshooting system issues and maintaining
+                                database integrity.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-title">Projects & Achievements</div>
+                    <div style="line-height: 1.6;">
+                        <p>Completed multiple projects including a personal portfolio, ShopSmart Web Application, and
+                            Bmazon online store concept using HTML, CSS, JavaScript, Bootstrap, Fetch API, and
+                            LocalStorage. These projects can be viewed through my LinkedIn profile.</p>
+                        <p style="margin-top: 12px;">Additionally, I have earned <strong>Island First titles in drama
+                                and poetry</strong> and received <strong>distinctions in LAMDA examinations</strong>,
+                            demonstrating strong communication skills, confidence, and creativity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mobile-nav">
+        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="contact.html"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="far fa-plus-square"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="index.html"><img src="images/profile.png" style="width: 24px; height: 24px; border-radius: 50%;"></a>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.gallery-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            const tabs = document.querySelectorAll('.gallery-tab');
+            if (tabId === 'projects') tabs[0].classList.add('active');
+            if (tabId === 'skills') tabs[1].classList.add('active');
+            if (tabId === 'info') tabs[2].classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
